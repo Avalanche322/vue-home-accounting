@@ -1,5 +1,6 @@
 <template>
-	<table>
+	<div class="history-table">
+		<table>
 		<thead>
 		<tr>
 		<th>#</th>
@@ -33,6 +34,7 @@
 		</tr>
 		</tbody>
 	</table>	
+	</div>
 </template>
 
 <script>

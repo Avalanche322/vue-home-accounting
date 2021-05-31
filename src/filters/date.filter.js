@@ -5,7 +5,7 @@ export default function dateFilter(value, format = 'date'){
 
 	if(format.includes('date')){
 		options.day = 'numeric'
-		options.month = 'long'
+		options.month = 'numeric'
 		options.year = 'numeric'
 	}
 

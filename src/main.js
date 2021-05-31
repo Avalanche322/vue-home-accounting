@@ -4,6 +4,7 @@ import Paginate from 'vuejs-paginate'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import Vuetify from 'vuetify'
 import currencyFilter from './filters/currency.filter'
 import localizeFilter from './filters/localize.filter'
 import tooltipDirective from './directives/tootip.directive'
@@ -22,6 +23,7 @@ import 'firebase/database'
 Vue.config.productionTip = false
 
 Vue.use(messagePlugin)
+Vue.use(Vuetify)
 Vue.use(titlePlugin)
 Vue.use(Vuelidate)
 Vue.use(VueMeta)

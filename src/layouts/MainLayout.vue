@@ -5,7 +5,7 @@
 
 			<Navbar @click="isOpen = !isOpen"/>
 			<Sidebar v-model="isOpen" :key="locale"/>
-			<main class="app-content" :class="{full: !isOpen}">
+			<main class="app-content" :class="{full: !isOpen, overflowHidden: isOpen}">
 				<div class="app-page">
 					<router-view/>
 			</div>
@@ -28,8 +28,8 @@ import messages from '@/utilus/messages'
 export default {
 	name:'main-layout',
 	data:()=>({
-		isOpen:true,
-		loading: true
+		isOpen:false,
+		loading: true,
 	}),
 	async mounted(){
 		if(!Object.keys(this.$store.getters.info).length){

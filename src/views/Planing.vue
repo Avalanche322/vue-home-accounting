@@ -1,6 +1,6 @@
 <template>
 	<div>
-	<div class="page-title">
+	<div class="page-title planing-title">
 		<h3>{{"PlanningTitle" | localize}}</h3>
 		<h4>{{info.bill | currency('UAH')}}</h4>
 	</div>
@@ -28,8 +28,6 @@
 
 <script>
 import {mapGetters} from 'vuex'
-import currencyFilter from '../filters/currency.filter'
-import localizeFilter from '../filters/localize.filter'
 export default {
 	name: 'planing',
 	metaInfo(){
@@ -67,8 +65,8 @@ export default {
 
 		const  tooltipValue = cat.limit - spend
 		const tooltip = `${
-        tooltipValue < 0 ? localizeFilter('MoreThan') : localizeFilter('Stayed')
-      } ${currencyFilter(Math.abs(tooltipValue))}`
+        tooltipValue < 0 ? 'Exceeded' : 'AllRight'
+      }`
 
 		return{
 			...cat,

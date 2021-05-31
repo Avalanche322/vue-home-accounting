@@ -9,13 +9,14 @@
 	-ms-flex-align:center;
 	align-items:center;
 	padding-top:5rem;
-	height:100vh;
+	min-height:100vh;
 }
-
 .auth-card{
 	width:500px;
 }
-
+.history-table{
+	overflow-x:auto
+}
 .auth-submit{
 	width:100%;
 }
@@ -32,7 +33,9 @@
 	position:relative;
 	min-height:100vh;
 }
-
+.overflowHidden{
+	overflow: hidden;
+}
 .app-sidenav{
 	padding-top:5px;
 	position:absolute;
@@ -185,4 +188,33 @@
 .history-chart{
 	max-width:600px;
 	margin:0 auto;
+}
+@media (max-width: 768px) {
+	.planing-title{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.sidenav{
+		position: absolute !important;
+		width: 100% !important;
+	}
+}
+@media (max-width: 600px) {
+	.category-edit{
+		margin: 50px 0px 0px 0px;
+	}
+}
+@media (max-width: 520px) {
+	.empty-layout{
+		padding-top: 2rem;
+	}
+	.auth-card{
+		width:300px;
+	}
+	.navbar{
+		padding:0 1rem;
+	}
+	.dropdown-trigger{
+		padding: 0 !important;
+	}
 }
