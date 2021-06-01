@@ -28,7 +28,7 @@ import messages from '@/utilus/messages'
 export default {
 	name:'main-layout',
 	data:()=>({
-		isOpen:false,
+		isOpen: true,
 		loading: true,
 	}),
 	async mounted(){
